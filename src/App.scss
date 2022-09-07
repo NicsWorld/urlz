@@ -1,0 +1,251 @@
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+$dark: #000;
+$--bg-color: blue;
+
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: $background;
+  // background-color: #ffe5b4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  // font-size: calc(10px + 2vmin);
+  color: $text;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.group {
+  display: flex;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
+  flex-direction: column;
+  width: 45rem;
+  position: relative;
+  text-align: left;
+  label {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: $dark;
+  }
+
+  .field {
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: $input-bg-color;
+    color: $input-text-color;
+    border: none;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    &::placeholder {
+      color: $input-text-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .shortenButton {
+    height: 2rem;
+    background-color: #7f8ff4;
+    color: #fff;
+    border: none;
+    position: absolute;
+    // 29 + 16 + 8
+    // height of label + margin-bottom on label + half the height of the button
+    top: 53px;
+    border-radius: 20px;
+    // or 14.4px
+    right: 2%;
+    padding: 0 2rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .shortenButton:disabled {
+    background-color: #ededed;
+    color: $dark;
+  }
+  .control-demo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    label {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .controls {
+    // margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .control {
+      &:hover {
+        cursor: pointer;
+      }
+      &:first-child {
+        padding-left: 0;
+        border: none;
+      }
+      &:last-child {
+        border: none;
+      }
+      padding: 0 1rem;
+      border-left: 1px solid $text;
+      border-right: 1px solid $text;
+    }
+    .active {
+      color: $dark;
+      font-weight: bold;
+    }
+    .inactive {
+      opacity: 0.6;
+    }
+  }
+}
+.customInput {
+  background-color: $background;
+  border: none;
+  border-bottom: 1px solid $input-text-color;
+  color: $input-text-color;
+  &:focus {
+    outline: none;
+  }
+}
+
+.customRow {
+  svg {
+    height: 1rem;
+    width: 1rem;
+  }
+  .taken {
+    fill: red;
+  }
+  .free {
+    fill: green;
+  }
+}
+.customInput {
+  &::placeholder {
+    color: $input-text-color;
+  }
+}
+
+.finalGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  button {
+    height: 3rem;
+    width: 3rem;
+    color: $dark;
+    border: none;
+    position: absolute;
+    background: none;
+    right: 0;
+    &:hover {
+      background-color: #ededed;
+      cursor: pointer;
+    }
+  }
+  .finalUrl {
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: $input-bg-color;
+    color: $dark;
+    border: none;
+    width: 45rem;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    &::placeholder {
+      color: $input-text-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .copied {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 0.5rem;
+    svg {
+      fill: green;
+    }
+  }
+}
+input[type="range"] {
+  cursor: pointer;
+}
+.info {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  svg {
+    fill: $button-bg-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+dialog {
+  border: none !important;
+  border-radius: calc(5px * var(--ratio));
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  width: 600px;
+  height: 600px;
+  margin-top: 10rem;
+  color: $dark;
+  font-size: 18px;
+  font-weight: 400;
+}
+dialog::backdrop {
+  background-color: blue;
+}
+::backdrop {
+  $--bg-color: blue;
+}
+
+dialog::backdrop {
+  background-color: $--bg-color;
+}
+.blur {
+  opacity: 0.5;
+}
+
+.buttonContainer {
+  button {
+    height: 4rem;
+    background-color: #7f8ff4;
+    color: #fff;
+    border: none;
+    border-radius: 35px;
+    padding: 0 4rem;
+    font-size: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+input[type="range"] {
+  accent-color: $button-bg-color;
+}
+// .modalContainer {
+//   position: relative;
+//   .monster {
+//     position: absolute;
+//   }
+// }
