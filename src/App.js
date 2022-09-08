@@ -335,7 +335,6 @@ function App() {
           />
         )}
       </header>
-      {/* <img src={bmfinal} className="boxmonster" alt="idk" /> */}
     </div>
   );
 }
