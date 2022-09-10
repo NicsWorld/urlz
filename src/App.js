@@ -76,16 +76,6 @@ function App() {
     "customVal": customValue
   };
 
-    //need to strip http, or https from the url
-    // const formattedUrl = inputValue.replace("ht")
-    // let formattedUrl = "";
-    // if (inputValue.startsWith("http://")) {
-    //   formattedUrl = inputValue.replace("http://", "");
-    // }
-    // if (inputValue.startsWith("https://")) {
-    //   formattedUrl = inputValue.replace("https://", "");
-    // }
-
     fetch(`http://localhost:8000/encode`, {
       method: "POST",
       body: JSON.stringify(options)
