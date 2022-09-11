@@ -5,6 +5,7 @@ import { ReactComponent as TakenSvg } from "./taken.svg";
 import { ReactComponent as FreeSvg } from "./free.svg";
 import { ReactComponent as CopySvg } from "./copy3.svg";
 import { ReactComponent as InfoSvg } from "./info.svg";
+import { ReactComponent as LogoSvg } from "./logo.svg";
 import Modal from "./Modal";
 
 const chance = new Chance();
@@ -181,6 +182,9 @@ function App() {
   return (
     <div className="App">
       <header className={"header"}>
+        <div className="logo">
+          <LogoSvg />
+        </div>
         <div
           className="info"
           onClick={() => {

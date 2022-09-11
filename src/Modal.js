@@ -1,10 +1,7 @@
-import bmfinal from "./bmfinal.png";
-
 export default function Modal(props) {
   return (
     <dialog open={true} onClose={() => onClose()}>
       <div className="modalContainer">
-        <img className="monster" src={bmfinal} />
         <p className="intro">
           Hi! This app allows you to enter a long url, and make it shorter. Or a
           short url, and make it longer, and a few other things.
