@@ -225,16 +225,7 @@ dialog {
     padding-bottom: 3rem;
   }
 }
-dialog::backdrop {
-  background-color: blue;
-}
-::backdrop {
-  $--bg-color: blue;
-}
 
-dialog::backdrop {
-  background-color: $--bg-color;
-}
 .blur {
   opacity: 0.5;
 }
