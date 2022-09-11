@@ -139,11 +139,11 @@ function App() {
       ];
       const stringForDemo = chance.pickset(wordArr, wordsValue);
       const demoValueStr = stringForDemo.join("-");
+
       setDemoValue(demoValueStr);
     }
     if (activeControl === "custom") {
       setDemoValue(customValue);
-      // return `localhost:3000/${customValue}`;
     }
   }, [activeControl, lettersValue, wordsValue, customValue]);
 

@@ -34,6 +34,9 @@ $--bg-color: blue;
   width: 45rem;
   position: relative;
   text-align: left;
+  @media only screen and (max-device-width: 960px) {
+    width: unset;
+  }
   label {
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -122,6 +125,9 @@ $--bg-color: blue;
   &:focus {
     outline: none;
   }
+  @media only screen and (max-device-width: 960px) {
+    width: 8rem;
+  }
 }
 
 .customRow {
@@ -173,6 +179,9 @@ $--bg-color: blue;
     &:focus {
       outline: none;
     }
+    @media only screen and (max-device-width: 960px) {
+      width: 22rem;
+    }
   }
   .copied {
     justify-content: center;
@@ -211,6 +220,10 @@ dialog {
   color: $dark;
   font-size: 18px;
   font-weight: 400;
+  @media only screen and (max-device-width: 960px) {
+    width: unset;
+    padding-bottom: 3rem;
+  }
 }
 dialog::backdrop {
   background-color: blue;
